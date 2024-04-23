@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: degular;
+  src: url("../app/fonts/Degular/Degular/Degular-Thin.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: degular;
+  src: url("../app/fonts/Degular/Degular/Degular-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: degular;
+  src: url("../app/fonts/Degular/Degular/Degular-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: degular;
+  src: url("../app/fonts/Degular/Degular/Degular-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: degular;
+  src: url("../app/fonts/Degular/Degular/Degular-Semibold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: degular;
+  src: url("../app/fonts/Degular/Degular/Degular-Bold.otf");
+  font-weight: 700;
+}
+
+.bgimage1 {
+  background-image: url("../pattern/common/atoms/icons/ProductIconsOne.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.bgimage2 {
+  background-image: url("../pattern/common/atoms/icons/ProductIconsTwo.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.bgimage3 {
+  background-image: url("../pattern/common/atoms/icons/ProductIconsThree.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.bgimage4 {
+  background-image: url("../pattern/common/atoms/icons/ProductIconsFour.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.stroke-custom {
+  path {
+    stroke-width: "1px" !important;
+  }
+}
