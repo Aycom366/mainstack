@@ -7,15 +7,21 @@ const rootReducer = combineReducers({
   [baseApiSlice.reducerPath]: baseApiSlice.reducer,
 });
 
-export const store = configureStore({
-  reducer: rootReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(baseApiSlice.middleware),
-  devTools: process.env.NODE_ENV !== "production",
-});
+export const setupStore = (preloadedState?: Partial<RootState>) => {
+  return configureStore({
+    reducer: rootReducer,
+    preloadedState,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(baseApiSlice.middleware),
+    devTools: process.env.NODE_ENV !== "production",
+  });
+};
+
+export const store = setupStore();
 
 // enable listener behavior for the store
 setupListeners(store.dispatch);
 
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>;
 export type AppDispatch = typeof store.dispatch;
