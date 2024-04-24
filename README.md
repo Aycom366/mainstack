@@ -30,3 +30,10 @@ https://fe-task-api.mainstack.io/?type=withdraw
 ```
 
 The above is also the reason why I didn't do the Empty transaction screen, If I do, there will be no way to get to show the empty screen
+
+The app uses the following technologies:
+
+- NextJS
+- Redux Toolkit for Http requests
+- Jest for testing
+  **Not All cases are covered, I only covered some parts that can also be applicable to other parts of the app**

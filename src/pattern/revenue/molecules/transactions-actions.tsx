@@ -73,10 +73,18 @@ const TransactionsActions = () => {
         </DrawerTrigger>
 
         <DrawerContent className=' flex flex-col  bg-transparent p-2 w-full ml-auto max-w-[470px] h-full'>
-          <aside className='py-[20px] rounded-[20px] flex flex-col justify-between overflow-auto  bg-white h-full'>
+          <aside
+            data-testid='filter'
+            className='py-[20px] rounded-[20px] flex flex-col justify-between overflow-auto  bg-white h-full'
+          >
             <div className='gap-y-6 flex flex-col'>
               <header className='flex px-6 flex-row items-center justify-between'>
-                <p className='text-2xl font-bold text-[#131316]'>Filter</p>
+                <p
+                  data-testid='Filter-Paragraph'
+                  className='text-2xl font-bold text-[#131316]'
+                >
+                  Filter
+                </p>
                 <button onClick={() => setOpen(false)}>
                   <X />
                 </button>

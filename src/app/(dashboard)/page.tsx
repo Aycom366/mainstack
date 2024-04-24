@@ -1,12 +1,5 @@
-"use client";
-import { useGetUserQuery } from "@/redux/services/get-user.api-slice";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  const { data } = useGetUserQuery();
-
-  return (
-    <>
-      <div>Home Page</div>
-    </>
-  );
+  redirect("/revenue");
 }
